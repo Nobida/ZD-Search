@@ -25,10 +25,14 @@
 
 
 # 用Django写的一个网站进行展示
-1.中文分词功能，图片链接在[此](/zujuan_utils/zujuan_utils/spiders/word2html.py)
-2.实体查询功能，图片链接在[此](/zujuan_utils/zujuan_utils/spiders/zujuanparse.py)
-3.关系查询功能，图片链接在[此](/zujuan_utils/zujuan_utils/spiders/word2html.py)
-4.智能问答功能，图片链接在[此](/zujuan_utils/zujuan_utils/spiders/zujuanparse.py)
+1.中文分词功能
+![Demo01](https://github.com/Nobida/ZDKnowledgeGraph/blob/master/demo/zd01.png)
+2.实体查询功能
+![Demo01](https://github.com/Nobida/ZDKnowledgeGraph/blob/master/demo/zd02.png)
+3.关系查询功能
+![Demo01](https://github.com/Nobida/ZDKnowledgeGraph/blob/master/demo/zd03.png)
+4.智能问答功能
+![Demo01](https://github.com/Nobida/ZDKnowledgeGraph/blob/master/demo/zd04.png)
 
 
 ## 有问题欢迎反馈
