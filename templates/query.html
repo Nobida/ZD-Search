@@ -1,0 +1,81 @@
+{% extends "navigate.html" %} {% block mainbody %}
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="/static/js/echarts.common.min.js"></script>   
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+</head>
+<title>智能问答</title>
+<div class="container">
+    <div class="row">
+    <!--head start-->
+    <div class="col-md-12">
+        <h3 class="page-header"><i class="fa fa-share-alt" aria-hidden="true"></i> 智能问答 </h3>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="\">Home</a></li>
+                <li><i class="fa fa-share-alt" aria-hidden="true"></i>智能问答</li>
+            </ol>
+    </div>
+    <div class = "col-md-12">
+        <div class="panel panel-default ">
+            <header class = "panel-heading">
+                询问内容：
+            </header>
+            <div class = "panel-body">
+                <!--搜索框-->
+                <form method = "get" id = 'searchEntityForm'>
+                    <div >
+                        <div class="input-group">
+                            <input type="text" id = "query" name = "query" class="form-control" placeholder="输入问题" aria-describedby="basic-addon1">
+                            <span class="btn btn-primary input-group-addon" type="button" id="relationSearchButton" style="background-color:#4592fe ; padding:6px 38px" onclick="document.getElementById('searchEntityForm').submit();">查询</span>
+                         </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+    </div>
+    <p>
+        <div class = "col-md-12">
+            {% if ctx %}
+                <div class="panel panel-default">
+                    <header class ="panel-heading">
+                        <div class = "panel-body">
+                            <h2>数据库中暂未添加该实体</h2>
+                        </div>
+                    </header>
+                </div>
+            {% endif %}
+        </div>
+    </p>
+<!--实体关系查询-->
+{% if answer %}
+    <!-- Echart Dom对象（实体关系） -->
+    <div class = "col-md-12">
+        <div class="panel panel-default ">
+            <header class="panel-heading">
+                输入的问题是 :
+            </header>
+            <div class = "panel-body ">
+                <h5> {{ query }}</h5>
+            </div>
+        </div>
+    </div>
+    <div class = "col-md-12">
+        <div class="panel panel-default ">
+            <header class="panel-heading">
+                答案 :
+            </header>
+            <div class = "panel-body ">
+                <h5> {{ answer }}</h5>
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+</div>
+</div>
+{% endblock %}
