@@ -10,7 +10,7 @@ class Neo4j_Handle():
 		print("Neo4j Init ...")
 
 	def connectDB(self):
-		self.graph = Graph("bolt: // localhost:7687", username="neo4j", password="qzwkx333530")
+		self.graph = Graph("http://59.110.243.182:7474", username="neo4j", password="qzwkx333530")
 		self.matcher = NodeMatcher(self.graph)
 
 
